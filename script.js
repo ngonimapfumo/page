@@ -1,6 +1,5 @@
 // Small scroll-reveal effect — respects `prefers-reduced-motion`.
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
 if (!prefersReduced && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -13,6 +12,5 @@ if (!prefersReduced && 'IntersectionObserver' in window) {
       }
     });
   }, { threshold: 0.12 });
-
   document.querySelectorAll('.project, .about > *, .contact > *').forEach(el => observer.observe(el));
 }
