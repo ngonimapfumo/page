@@ -246,17 +246,15 @@ h2 { font-size: clamp(2.6rem, 5vw, 5rem); line-height: .95; letter-spacing: -.06
   opacity: .65;
 }
 
-.movie { background: radial-gradient(circle at 72% 35%, #815a9d 0, #302843 30%, #171923 70%); }
+
 .movie-screens { position: absolute; inset: 0; z-index: 1; display: flex; align-items: flex-end; justify-content: center; gap: 18px; padding: 40px 45px 0; }
 .movie-screens::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg,rgba(16,15,26,.42),transparent 42%),linear-gradient(0deg,rgba(16,15,26,.46),transparent 32%); pointer-events: none; }
-.movie-screen { position: relative; z-index: 1; width: 142px; aspect-ratio: 7 / 16; flex: none; object-fit: cover; border: 5px solid #090a0f; border-radius: 19px; box-shadow: 0 20px 36px rgba(0,0,0,.48), 0 0 0 1px rgba(255,255,255,.18); transition: transform .5s cubic-bezier(.2,.7,.2,1), filter .5s ease; }
-.movie-screen-list, .movie-screen-movies, .movie-screen-home { transform: translateY(0); }
+.movie-screen { position: relative; z-index: 1; width: 150px; aspect-ratio: 7 / 16; flex: none; object-fit: cover; border: 5px solid #090a0f; border-radius: 19px; box-shadow: 0 20px 36px rgba(0,0,0,.48), 0 0 0 1px rgba(255,255,255,.18); transition: transform .5s cubic-bezier(.2,.7,.2,1), filter .5s ease; }
+.movie-screen-list, .movie-screen-movies, .movie-screen-home { transform: translateY(10); }
 .movie-screen-list { opacity: .86; }
 .movie-screen-movies { opacity: .9; }
 
-.project:hover .movie-screen-list { transform: rotate(-7deg) translate(-5px,8px); }
-.project:hover .movie-screen-movies { transform: rotate(5deg) translate(5px,8px); }
-.project:hover .movie-screen-home { transform: translateY(-5px) scale(1.025); }
+
 
 .weather-preview { width: 154px; height: 298px; top: 18px; left: 50%; transform: translateX(-50%) rotate(-6deg); }
 .phone-speaker { position: absolute; z-index: 2; top: 12px; left: 50%; transform: translateX(-50%); width: 52px; height: 5px; border-radius: 20px; background: rgba(255,255,255,.22); }
@@ -317,6 +315,9 @@ h2 { font-size: clamp(2.6rem, 5vw, 5rem); line-height: .95; letter-spacing: -.06
   font-weight: 600;
   transition: color .25s ease, gap .25s ease;
 }
+
+.project-links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; }
+.project-links .project-link { margin-top: 0; }
 
 .project-link:hover { color: var(--accent); gap: 9px; }
 
